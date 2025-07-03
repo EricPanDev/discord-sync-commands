@@ -21,12 +21,12 @@ module.exports = async (client, commands, options = {
 
     log(`Created ${newCommands.length} commands!`);
 
-    const deletedCommands = currentCommands.filter((command) => !commands.some((c) => c.name === command.name)).toJSON();
-    for (let deletedCommand of deletedCommands) {
-        await deletedCommand.delete();
-    }
+    // const deletedCommands = currentCommands.filter((command) => !commands.some((c) => c.name === command.name)).toJSON();
+    // for (let deletedCommand of deletedCommands) {
+    //     await deletedCommand.delete();
+    // }
 
-    log(`Deleted ${deletedCommands.length} commands!`);
+    // log(`Deleted ${deletedCommands.length} commands!`);
 
     const updatedCommands = commands.filter((command) => currentCommands.some((c) => c.name === command.name));
     let updatedCommandCount = 0;
