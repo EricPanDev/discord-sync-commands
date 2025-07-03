@@ -49,7 +49,7 @@ module.exports = async (client, commands, options = {
     return {
         currentCommandCount: currentCommands.size,
         newCommandCount: newCommands.length,
-        deletedCommandCount: deletedCommands.length,
+        deletedCommandCount: 0,
         updatedCommandCount
     };
 
